@@ -91,8 +91,7 @@ class Events
                             'from_client_id' => $client_id,
                             'from_client_name' => $client_name,
                         );
-                    Gateway::sendToClient($message_data['to_client_id'], json_encode($new_message));
-                    return Gateway::sendToCurrentClient(json_encode($new_message));
+                    return Gateway::sendToClient($message_data['to_client_id'], json_encode($new_message));
                 }
                 // 群组
                 $new_message = $message_data + array(
