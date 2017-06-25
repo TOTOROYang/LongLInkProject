@@ -99,7 +99,7 @@ class Events
                         'from_client_id' => $client_id,
                         'from_client_name' => $client_name,
                     );
-                return Gateway::sendToGroup($room_id, json_encode($new_message), $client_id);
+                return Gateway::sendToGroup($room_id, json_encode($new_message), array($client_id));
 
             // 客户端发言 message: {type:say, to_client_id:xx, content:xx}
             case
